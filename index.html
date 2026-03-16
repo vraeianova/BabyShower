@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baby Shower | Invitación Editorial</title>
+    <meta
+      name="description"
+      content="Invitación digital premium para baby shower con apertura de sobre interactiva y diseño editorial."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="ambient ambient-left" aria-hidden="true"></div>
+      <div class="ambient ambient-right" aria-hidden="true"></div>
+
+      <section class="intro-screen" id="intro-screen" aria-label="Apertura de invitación">
+        <div class="intro-copy">
+          <p class="eyebrow">Una invitación muy especial</p>
+          <h1>Baby Shower</h1>
+          <p class="intro-text">
+            Toca el sobre y descubre una celebración pensada con amor, calma y
+            elegancia.
+          </p>
+        </div>
+
+        <button
+          class="envelope-scene"
+          id="open-invitation"
+          type="button"
+          aria-controls="main-content"
+          aria-expanded="false"
+        >
+          <span class="scene-glow" aria-hidden="true"></span>
+          <span class="envelope" aria-hidden="true">
+            <span class="envelope-back"></span>
+            
+            <span class="invitation-card" aria-hidden="true">
+              <span class="invitation-card__frame">
+                <span class="invitation-card__crest">A</span>
+                <span class="invitation-card__line">baby shower</span>
+                <strong class="invitation-card__title">Amelia</strong>
+                <span class="invitation-card__date">Sábado 18 de abril</span>
+              </span>
+            </span>
+
+            <span class="envelope-liner"></span>
+            <span class="envelope-flap"></span>
+            <span class="envelope-front">
+              <span class="wax-seal">A</span>
+              <span class="envelope-monogram">Baby Shower</span>
+            </span>
+          </span>
+        </button>
+
+        <p class="tap-hint" id="tap-hint">Toca para abrir</p>
+      </section>
+
+      <main class="landing" id="main-content">
+        <header class="hero section">
+          <div class="hero-copy">
+            <p class="eyebrow">Celebración editorial</p>
+            <h2>
+              Esperamos con ilusión la llegada de
+              <span id="baby-name">Amelia</span>
+            </h2>
+            <p class="hero-text">
+              Una tarde pensada para celebrar la llegada de Amelia entre flores, detalles delicados y las personas que más queremos.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://maps.google.com/?q=Casa+Magnolia+Tegucigalpa" target="_blank" rel="noreferrer">
+                Ver ubicación
+              </a>
+              <a class="button button-secondary" href="#rsvp">Confirmar asistencia</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-card hero-card--plaid"></div>
+            <div class="hero-card hero-card--photo">
+              <img src="https://placehold.co/600x800?text=Tu+Foto" alt="Placeholder de foto principal" />
+            </div>
+            <div class="hero-card hero-card--note">
+              <p>Con cariño</p>
+              <strong>Una tarde para atesorar</strong>
+            </div>
+          </div>
+        </header>
+
+        <section class="message section">
+          <div class="section-heading">
+            <p class="eyebrow">Mensaje</p>
+            <h3>Una bienvenida serena para una nueva historia</h3>
+          </div>
+          <p class="message-copy">
+            Queremos compartir contigo la alegría de este momento tan especial. Valentina celebra con ilusión la espera de Amelia, y nos encantará vivirlo contigo entre conversaciones suaves, detalles bonitos y mucha emoción.
+          </p>
+        </section>
+
+        <section class="details-grid section">
+          <article class="detail-card">
+            <p class="eyebrow">Detalles</p>
+            <h3>Información del evento</h3>
+            <dl class="detail-list">
+              <div>
+                <dt>Fecha</dt>
+                <dd>Sábado 18 de abril de 2026</dd>
+              </div>
+              <div>
+                <dt>Hora</dt>
+                <dd>4:00 PM</dd>
+              </div>
+              <div>
+                <dt>Lugar</dt>
+                <dd>Casa Magnolia, Tegucigalpa</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="detail-card countdown-card">
+            <p class="eyebrow">Cuenta regresiva</p>
+            <h3>Falta muy poco</h3>
+            <div class="countdown" aria-live="polite">
+              <div class="countdown-item">
+                <span id="days">00</span>
+                <small>días</small>
+              </div>
+              <div class="countdown-item">
+                <span id="hours">00</span>
+                <small>horas</small>
+              </div>
+              <div class="countdown-item">
+                <span id="minutes">00</span>
+                <small>min</small>
+              </div>
+              <div class="countdown-item">
+                <span id="seconds">00</span>
+                <small>seg</small>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="dresscode section">
+          <div class="section-heading">
+            <p class="eyebrow">Dresscode</p>
+            <h3>Sugerencia de código de vestimenta</h3>
+          </div>
+          <p class="dresscode-text">Tonos neutros, champagne y verde suave</p>
+          <div class="color-palette">
+            <span class="color-dot" style="background-color: #d8c5a0;" aria-label="Champagne"></span>
+            <span class="color-dot" style="background-color: #f5f1ea;" aria-label="Neutro"></span>
+            <span class="color-dot" style="background-color: #2b4e53;" aria-label="Verde Suave"></span>
+          </div>
+        </section>
+
+        <section class="editorial section">
+          <div class="editorial-visual">
+            <figure class="editorial-image editorial-image--large">
+              <img src="https://placehold.co/600x800?text=Tu+Foto" alt="Referencia editorial suave de composición elegante" />
+            </figure>
+            <div class="editorial-texture" aria-hidden="true"></div>
+          </div>
+          <div class="editorial-copy">
+            <p class="eyebrow">Atmósfera</p>
+            <h3>Una experiencia delicada, moderna y profundamente cálida</h3>
+            <p>
+              Hemos imaginado esta reunión como una pequeña pausa hermosa:
+              flores ligeras, tonos profundos, una mesa cuidada y mucha emoción
+              compartida.
+            </p>
+            <p>
+              Si deseas, puedes traer un detalle para Amelia o simplemente
+              venir a celebrar con nosotros. Tu presencia será lo más valioso.
+            </p>
+          </div>
+        </section>
+
+        <section class="gallery section">
+          <div class="section-heading">
+            <p class="eyebrow">Momentos</p>
+            <h3>Nuestra historia</h3>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://placehold.co/600x800?text=Foto+1" alt="Galería 1" loading="lazy" /></div>
+            <div class="gallery-item"><img src="https://placehold.co/800x600?text=Foto+2" alt="Galería 2" loading="lazy" /></div>
+            <div class="gallery-item"><img src="https://placehold.co/600x800?text=Foto+3" alt="Galería 3" loading="lazy" /></div>
+          </div>
+        </section>
+
+        <section class="rsvp section" id="rsvp">
+          <div class="section-heading">
+            <p class="eyebrow">RSVP</p>
+            <h3>Confirma tu asistencia</h3>
+          </div>
+          <p class="rsvp-copy">
+            Nos ayudará muchísimo recibir tu confirmación antes del
+            <span>10 de abril de 2026</span>.
+          </p>
+          <div class="rsvp-actions">
+            <a class="button button-primary" href="https://wa.me/50499990000?text=Hola%2C%20confirmo%20mi%20asistencia%20al%20baby%20shower%20de%20Amelia.%20%C2%A1Gracias%20por%20la%20invitaci%C3%B3n%21" target="_blank" rel="noreferrer">
+              Confirmar por WhatsApp
+            </a>
+            <a class="button button-secondary" href="https://www.amazon.com/baby-reg/placeholder" target="_blank" rel="noreferrer">
+              Ver mesa de regalos
+            </a>
+          </div>
+        </section>
+
+        <footer class="footer section">
+          <p>Con amor, familia de Amelia</p>
+          <span>Gracias por acompañarnos en este momento tan esperado.</span>
+        </footer>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
