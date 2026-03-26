@@ -1,0 +1,4 @@
+[     663ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://api.whatsapp.com/data/manifest.json:0
+[     663ms] [ERROR] Manifest fetch from https://api.whatsapp.com/data/manifest.json failed, code 404 @ https://api.whatsapp.com/send/?phone=50497770122&text=Hola%2C+confirmo+mi+asistencia+al+baby+shower+de+Rodrigo.+%C2%A1Gracias+por+la+invitaci%C3%B3n%21&type=phone_number&app_absent=0:12
+[    1338ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://api.whatsapp.com/data/manifest.json:0
+[    1410ms] [ERROR] Manifest fetch from https://api.whatsapp.com/data/manifest.json failed, code 404 @ https://api.whatsapp.com/send/?phone=50497770122&text=Hola%2C+confirmo+mi+asistencia+al+baby+shower+de+Rodrigo.+%C2%A1Gracias+por+la+invitaci%C3%B3n%21&type=phone_number&app_absent=0:0
