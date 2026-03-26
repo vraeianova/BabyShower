@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Baby Shower | Invitación Editorial</title>
+    <title>Ale’s Baby Shower | Invitación Premium</title>
     <meta
       name="description"
       content="Invitación digital premium para baby shower con apertura de sobre interactiva y diseño editorial."
@@ -24,18 +24,19 @@
       <section class="intro-screen" id="intro-screen" aria-label="Apertura de invitación">
         <div class="intro-copy">
           <p class="eyebrow">Una invitación muy especial</p>
-          <h1>Baby Shower</h1>
+          <h1>Ale’s Baby Shower</h1>
           <p class="intro-text">
             Toca el sobre y descubre una celebración pensada con amor, calma y
             elegancia.
           </p>
         </div>
 
-        <button
+        <div
           class="envelope-scene"
           id="open-invitation"
-          type="button"
-          aria-controls="main-content"
+          role="button"
+          tabindex="0"
+          aria-label="Abrir sobre"
           aria-expanded="false"
         >
           <span class="scene-glow" aria-hidden="true"></span>
@@ -44,21 +45,28 @@
             
             <span class="invitation-card" aria-hidden="true">
               <span class="invitation-card__frame">
-                <span class="invitation-card__crest">A</span>
+                <span class="invitation-card__crest">R</span>
                 <span class="invitation-card__line">baby shower</span>
-                <strong class="invitation-card__title">Amelia</strong>
-                <span class="invitation-card__date">Sábado 18 de abril</span>
+                <strong class="invitation-card__title">Rodrigo Antonio</strong>
+                <span class="invitation-card__date">Domingo 19 de abril</span>
+                
+                <button class="read-invitation" id="read-invitation" type="button">
+                  <span>Leer invitación</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+                  </svg>
+                </button>
               </span>
             </span>
 
             <span class="envelope-liner"></span>
             <span class="envelope-flap"></span>
             <span class="envelope-front">
-              <span class="wax-seal">A</span>
-              <span class="envelope-monogram">Baby Shower</span>
+              <span class="wax-seal">R</span>
+              <span class="envelope-monogram">Ale’s Baby Shower</span>
             </span>
           </span>
-        </button>
+        </div>
 
         <p class="tap-hint" id="tap-hint">Toca para abrir</p>
       </section>
@@ -66,17 +74,16 @@
       <main class="landing" id="main-content">
         <header class="hero section">
           <div class="hero-copy">
-            <p class="eyebrow">Celebración editorial</p>
             <h2>
               Esperamos con ilusión la llegada de
-              <span id="baby-name">Amelia</span>
+              <span id="baby-name">Rodrigo Antonio</span>
             </h2>
             <p class="hero-text">
-              Una tarde pensada para celebrar la llegada de Amelia entre flores, detalles delicados y las personas que más queremos.
+              Pronto, un pequeño niño llegará para comenzar su propia historia trayendo amor, ternura y nuevos sueños.
             </p>
 
             <div class="hero-actions">
-              <a class="button button-primary" href="https://maps.google.com/?q=Casa+Magnolia+Tegucigalpa" target="_blank" rel="noreferrer">
+              <a class="button button-primary" href="https://maps.google.com/?q=Portal+del+bosque+Etapa+1" target="_blank" rel="noreferrer">
                 Ver ubicación
               </a>
               <a class="button button-secondary" href="#rsvp">Confirmar asistencia</a>
@@ -86,7 +93,7 @@
           <div class="hero-visual" aria-hidden="true">
             <div class="hero-card hero-card--plaid"></div>
             <div class="hero-card hero-card--photo">
-              <img src="https://placehold.co/600x800?text=Tu+Foto" alt="Placeholder de foto principal" />
+              <img src="images/1.webp" alt="Foto principal de Rodrigo" />
             </div>
             <div class="hero-card hero-card--note">
               <p>Con cariño</p>
@@ -98,10 +105,10 @@
         <section class="message section">
           <div class="section-heading">
             <p class="eyebrow">Mensaje</p>
-            <h3>Una bienvenida serena para una nueva historia</h3>
+            <h3>Una dulce espera llena nuestros corazones de alegría</h3>
           </div>
           <p class="message-copy">
-            Queremos compartir contigo la alegría de este momento tan especial. Valentina celebra con ilusión la espera de Amelia, y nos encantará vivirlo contigo entre conversaciones suaves, detalles bonitos y mucha emoción.
+            Con el corazón lleno de amor, queremos compartir contigo este momento tan especial. Alejandra y Manuel celebran con ilusión la dulce espera de Rodrigo, un pequeño que está por llegar para llenar nuestros días de ternura y luz. Nos encantará que nos acompañes a vivir esta celebración entre sonrisas, detalles bonitos y una emoción que crece cada día.
           </p>
         </section>
 
@@ -112,15 +119,15 @@
             <dl class="detail-list">
               <div>
                 <dt>Fecha</dt>
-                <dd>Sábado 18 de abril de 2026</dd>
+                <dd>Domingo 19 de abril de 2026</dd>
               </div>
               <div>
                 <dt>Hora</dt>
-                <dd>4:00 PM</dd>
+                <dd>11:30 am</dd>
               </div>
               <div>
                 <dt>Lugar</dt>
-                <dd>Casa Magnolia, Tegucigalpa</dd>
+                <dd>Area social, Portal del bosque Etapa 1</dd>
               </div>
             </dl>
           </article>
@@ -151,35 +158,30 @@
 
         <section class="dresscode section">
           <div class="section-heading">
-            <p class="eyebrow">Dresscode</p>
-            <h3>Sugerencia de código de vestimenta</h3>
+            <h3>Código de vestimenta</h3>
           </div>
-          <p class="dresscode-text">Tonos neutros, champagne y verde suave</p>
           <div class="color-palette">
-            <span class="color-dot" style="background-color: #d8c5a0;" aria-label="Champagne"></span>
-            <span class="color-dot" style="background-color: #f5f1ea;" aria-label="Neutro"></span>
-            <span class="color-dot" style="background-color: #2b4e53;" aria-label="Verde Suave"></span>
+            <span class="color-dot" style="background-color: #ffffff;" aria-label="Blanco"></span>
+            <span class="color-dot" style="background-color: #F6EBD8;" aria-label="Beige"></span>
+            <span class="color-dot" style="background-color: #D6A779;" aria-label="Café"></span>
           </div>
         </section>
 
         <section class="editorial section">
           <div class="editorial-visual">
             <figure class="editorial-image editorial-image--large">
-              <img src="https://placehold.co/600x800?text=Tu+Foto" alt="Referencia editorial suave de composición elegante" />
+              <img src="images/2.webp" alt="Foto editorial de Rodrigo" />
             </figure>
             <div class="editorial-texture" aria-hidden="true"></div>
           </div>
           <div class="editorial-copy">
-            <p class="eyebrow">Atmósfera</p>
-            <h3>Una experiencia delicada, moderna y profundamente cálida</h3>
             <p>
-              Hemos imaginado esta reunión como una pequeña pausa hermosa:
-              flores ligeras, tonos profundos, una mesa cuidada y mucha emoción
-              compartida.
+              Cada pequeño latido de espera nos recuerda la maravilla de la vida y la alegría de lo que está por llegar.
+              Con gratitud en el corazón, los futuros papás se llenan de emoción al imaginar los primeros abrazos, las risas compartidas y los momentos que pronto se convertirán en recuerdos inolvidables.
             </p>
             <p>
-              Si deseas, puedes traer un detalle para Amelia o simplemente
-              venir a celebrar con nosotros. Tu presencia será lo más valioso.
+              Rodrigo es ya el comienzo de una historia escrita con amor, donde cada día trae consigo una nueva ilusión y un motivo más para soñar.
+              Sus corazones laten ahora con un mismo propósito: acompañarlo, guiarlo y llenarlo de un cariño infinito que lo rodeará desde el primer instante.
             </p>
           </div>
         </section>
@@ -190,9 +192,9 @@
             <h3>Nuestra historia</h3>
           </div>
           <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://placehold.co/600x800?text=Foto+1" alt="Galería 1" loading="lazy" /></div>
-            <div class="gallery-item"><img src="https://placehold.co/800x600?text=Foto+2" alt="Galería 2" loading="lazy" /></div>
-            <div class="gallery-item"><img src="https://placehold.co/600x800?text=Foto+3" alt="Galería 3" loading="lazy" /></div>
+            <div class="gallery-item"><img src="images/3.webp" alt="Galería 1" loading="lazy" /></div>
+            <div class="gallery-item"><img src="images/4.webp" alt="Galería 2" loading="lazy" /></div>
+            <div class="gallery-item"><img src="images/5.webp" alt="Galería 3" loading="lazy" /></div>
           </div>
         </section>
 
@@ -203,20 +205,21 @@
           </div>
           <p class="rsvp-copy">
             Nos ayudará muchísimo recibir tu confirmación antes del
-            <span>10 de abril de 2026</span>.
+            <span>12 de abril de 2026</span>.
+          </p>
+          <p class="gift-note">
+            Si deseas hacernos un obsequio,<br>
+            agradeceremos que sea en efectivo.
           </p>
           <div class="rsvp-actions">
-            <a class="button button-primary" href="https://wa.me/50499990000?text=Hola%2C%20confirmo%20mi%20asistencia%20al%20baby%20shower%20de%20Amelia.%20%C2%A1Gracias%20por%20la%20invitaci%C3%B3n%21" target="_blank" rel="noreferrer">
+            <a class="button button-primary" href="https://wa.me/50497770122?text=Hola%2C%20confirmo%20mi%20asistencia%20al%20baby%20shower%20de%20Rodrigo.%20%C2%A1Gracias%20por%20la%20invitaci%C3%B3n%21" target="_blank" rel="noreferrer">
               Confirmar por WhatsApp
-            </a>
-            <a class="button button-secondary" href="https://www.amazon.com/baby-reg/placeholder" target="_blank" rel="noreferrer">
-              Ver mesa de regalos
             </a>
           </div>
         </section>
 
         <footer class="footer section">
-          <p>Con amor, familia de Amelia</p>
+          <p>Con amor, familia de Ale</p>
           <span>Gracias por acompañarnos en este momento tan esperado.</span>
         </footer>
       </main>

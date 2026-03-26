@@ -6,7 +6,8 @@ const elements = {
   days: document.getElementById("days"),
   hours: document.getElementById("hours"),
   minutes: document.getElementById("minutes"),
-  seconds: document.getElementById("seconds")
+  seconds: document.getElementById("seconds"),
+  readButton: document.getElementById("read-invitation")
 };
 
 let countdownInterval;
@@ -16,7 +17,7 @@ function pad(value) {
 }
 
 function updateCountdown() {
-  const targetDate = new Date("2026-04-18T16:00:00-06:00");
+  const targetDate = new Date("2026-04-19T11:30:00-06:00");
   const now = new Date();
   const difference = targetDate - now;
 
@@ -45,7 +46,7 @@ function updateCountdown() {
   elements.seconds.textContent = pad(seconds);
 }
 
-function revealLanding() {
+function openEnvelope() {
   if (document.body.classList.contains("is-opening")) {
     return;
   }
@@ -54,23 +55,36 @@ function revealLanding() {
   elements.openButton.setAttribute("aria-expanded", "true");
 
   window.setTimeout(() => {
-    document.body.classList.add("is-revealed");
-    elements.landing.setAttribute("tabindex", "-1");
-    elements.landing.focus({ preventScroll: true });
-    elements.landing.removeAttribute("tabindex");
-  }, 1420);
+    document.body.classList.add("show-read-button");
+  }, 1800);
+}
+
+function revealLanding() {
+  if (document.body.classList.contains("is-revealed")) {
+    return;
+  }
+
+  document.body.classList.add("is-revealed");
+  elements.landing.setAttribute("tabindex", "-1");
+  elements.landing.focus({ preventScroll: true });
+  elements.landing.removeAttribute("tabindex");
 
   window.setTimeout(() => {
     elements.introScreen.setAttribute("hidden", "hidden");
-  }, 2200);
+  }, 1200);
 }
 
 function bindEvents() {
-  elements.openButton.addEventListener("click", revealLanding);
+  elements.openButton.addEventListener("click", openEnvelope);
+  elements.readButton.addEventListener("click", revealLanding);
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" && document.activeElement === elements.openButton) {
-      revealLanding();
+    if (event.key === "Enter") {
+      if (document.activeElement === elements.openButton) {
+        openEnvelope();
+      } else if (document.activeElement === elements.readButton) {
+        revealLanding();
+      }
     }
   });
 }

@@ -375,6 +375,49 @@ a {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-size: 0.74rem;
+  transition: opacity 0.4s ease;
+}
+
+.read-invitation {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  background: transparent;
+  border: 0;
+  color: var(--bg-deep); /* Dark color as requested */
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.5rem);
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 10;
+}
+
+.read-invitation span {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.read-invitation svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  animation: bounce-intermittent 2s infinite;
+}
+
+@keyframes bounce-intermittent {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+body.show-read-button .read-invitation {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .landing {
@@ -398,8 +441,8 @@ a {
 }
 
 .hero-copy h2 {
-  font-size: clamp(3rem, 11vw, 5.9rem);
-  max-width: 9ch;
+  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+  max-width: 20ch;
 }
 
 .hero-copy h2 span {
@@ -741,6 +784,14 @@ a {
   padding: 1rem 0 4rem;
 }
 
+.gift-note {
+  margin-top: 2rem;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
 .footer {
   padding: 0 0 4.5rem;
   text-align: center;
@@ -774,14 +825,21 @@ body.is-opening .envelope-flap {
 }
 
 body.is-opening .invitation-card {
-  animation: invitation-rise 1.35s 0.18s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: invitation-rise 1.8s 0.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes invitation-rise {
+  0% { transform: translate(-50%, 0); z-index: 2; }
+  40% { transform: translate(-50%, -65%) scale(1.02); z-index: 2; }
+  60% { transform: translate(-50%, -65%) scale(1.02); z-index: 6; }
+  100% { transform: translate(-50%, -35%) scale(1.08); z-index: 6; }
 }
 
 body.is-revealed .intro-screen {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.72s ease;
-  position: absolute; /* Take it out of flow so landing page moves up */
+  transition: opacity 1s ease;
+  position: absolute;
 }
 
 body.is-revealed .landing {
