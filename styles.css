@@ -786,10 +786,9 @@ body.show-read-button .read-invitation {
 
 .gift-note {
   margin-top: 2rem;
-  font-family: var(--serif);
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: var(--muted);
+  line-height: 1.75;
+  font-size: 0.98rem;
+  color: var(--ink);
 }
 
 .footer {
